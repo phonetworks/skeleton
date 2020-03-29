@@ -1,0 +1,25 @@
+{
+    "name": "phonetworks/skeleton",
+    "type": "project",
+    "description": "Skeleton app based on Pho Networks",
+    "homepage": "https://phonetworks.org",
+    "license": "MIT",
+    "minimum-stability" : "dev",
+    "prefer-stable": true,
+    "authors": [
+          {
+              "name": "Emre Sokullu",
+              "email": "emre@phonetworks.org",
+              "homepage": "http://www.emresokullu.com"
+          }
+      ],
+      "require": {
+          "php":"^7.2",
+          "phonetworks/pho-microkernel": "dev-master",
+          "pho-adapters/storage-filesystem": "dev-master",
+          "pho-adapters/database-redis": "dev-master",
+          "pho-adapters/index-neo4j": "dev-master",
+          "pho-adapters/events-local": "dev-master",
+          "vlucas/phpdotenv": "^4.1"
+      }
+  }

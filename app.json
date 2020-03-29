@@ -1,0 +1,28 @@
+{
+    "name": "{{App Name}}",
+    "description": "{{App Description}}",
+    "repository": "https://github.com/phonetworks/skeleton",
+    "addons": ["rediscloud", "graphenedb", "mailgun"],
+    "buildpacks": [
+        {
+            "url": "heroku/php"
+        }
+    ],
+    "formation": {
+        "web": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "env": {
+          "FOUNDER_EMAIL": {
+              "value": "%s"
+          },
+          "FOUNDER_NICKNAME": {
+              "value": "admin"
+          },
+          "FOUNDER_PASSWORD": {
+              "generator": "secret"
+          }
+   }
+}
