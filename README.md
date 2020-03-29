@@ -2,7 +2,7 @@
 
 A skeleton app built on Pho Networks.
 
-Makes use of [Kernel]() and [Server-Rest]() subprojects.
+Makes use of [Micro-Kernel](https://github.com/phonetworks/pho-microkernel) and [Server-Rest](https://github.com/phonetworks/pho-server-rest) subprojects.
 
 ### ToDo
 
