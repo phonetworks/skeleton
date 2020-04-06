@@ -9,8 +9,6 @@
  * file that was distributed with this source code.
  */
 
-$root = dirname(__DIR__);
-
 require  $root . "/vendor/autoload.php";
 
 if(file_exists($root . "/build")) {
