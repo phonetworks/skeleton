@@ -11,12 +11,10 @@
  */
 
 $root = dirname(dirname(__DIR__));
-
 require  $root . "/vendor/autoload.php";
-include($root . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "inc.php");
-include($root . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "kernel.php");
-
+include $root . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "inc.php";
+include $root . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "kernel.php";
 $kernel = run($root);
-$server = new \Pho\Server\Rest\Server($kernel);
-$server->port(getenv("PORT"));
+include $root . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "server.php";
+$server = get_server($root, $kernel);
 $server->serve();
