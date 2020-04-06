@@ -15,4 +15,5 @@ require  $root . "/vendor/autoload.php";
 include($root . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "inc.php");
 include($root . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "kernel.php");
 
-run($root);
+$kernel = run($root);
+eval(\Psy\sh());

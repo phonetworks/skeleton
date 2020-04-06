@@ -1,5 +1,6 @@
 <?php
 
+
 /*
  * This file is part of the Pho package.
  *
@@ -9,16 +10,13 @@
  * file that was distributed with this source code.
  */
 
- 
 $root = dirname(dirname(__DIR__));
 
-require "{$root}/vendor/autoload.php";
+require  $root . "/vendor/autoload.php";
+include($root . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "inc.php");
+include($root . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "kernel.php");
 
-$dotenv = \Dotenv\Dotenv::createImmutable($root);
-$dotenv->load();
-
-include( "{$root}/src/kernel.php");
-
+$kernel = run($root);
 $server = new \Pho\Server\Rest\Server($kernel);
 $server->port(getenv("PORT"));
 $server->serve();
