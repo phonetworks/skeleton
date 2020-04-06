@@ -10,15 +10,15 @@
  */
 
 if(file_exists($root . "/build")) {
-    foreach (glob(__DIR__ . "/build/*.php") as $filename)
+    foreach (glob($root . "/build/*.php") as $filename)
     {
         include $filename;
     }
-    foreach (glob(__DIR__ . "/build/*Out/*.php") as $filename)
+    foreach (glob($root . "/build/*Out/*.php") as $filename)
     {
         include $filename;
     }
-    foreach (glob(__DIR__ . "/build/Edges/*.php") as $filename)
+    foreach (glob($root . "/build/Edges/*.php") as $filename)
     {
         include $filename;
     }
