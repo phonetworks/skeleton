@@ -55,4 +55,5 @@ function run(string $root): void
     $kernel = new \Pho\Kernel\Kernel($configs);
     $founder = new $_foundero($kernel, $kernel->space(), ...$_user_params);
     $kernel->boot($founder);
+    eval(\Psy\sh());
 }
