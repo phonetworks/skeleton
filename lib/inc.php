@@ -9,8 +9,6 @@
  * file that was distributed with this source code.
  */
 
-require  $root . "/vendor/autoload.php";
-
 if(file_exists($root . "/build")) {
     foreach (glob(__DIR__ . "/build/*.php") as $filename)
     {
